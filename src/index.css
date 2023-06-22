@@ -15,3 +15,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.gBtn {
+  background-color: red;
+}
+.gBtn:hover {
+  background-color: #335a64;
+}

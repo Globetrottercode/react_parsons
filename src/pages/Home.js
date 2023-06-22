@@ -1,5 +1,7 @@
 import ChatLogo from "../images/chat-svgrepo-com.svg";
 import Logo from "../images/Logo.png";
+import "../index.css";
+import "../App.css";
 function Home() {
   return (
     <>
@@ -19,7 +21,7 @@ function Home() {
               className="ml-16"
             ></img>
           </div>
-
+          <div className="hello"></div>
           <img
             style={{ height: "30vh", margin: "5% 5%" }}
             src={ChatLogo}
@@ -54,15 +56,14 @@ function Home() {
             <div
               style={{
                 display: "flex",
-                backgroundColor: "red",
+                // backgroundColor: "red",
                 width: "20%",
                 height: "85%",
                 borderTopRightRadius: "1vh",
                 borderBottomRightRadius: "1vh",
                 color: "white",
               }}
-              hover={{ backgroundColor: "black" }}
-              className="items-center justify-center"
+              className="items-center justify-center gBtn"
             >
               <p>Google</p>
             </div>

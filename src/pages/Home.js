@@ -8,35 +8,66 @@ function Home() {
         style={{ display: "flex", backgroundColor: "lightblue" }}
       >
         <div
-          style={{ display: "flex" }}
+          style={{ display: "flex", textAlign: "center" }}
           className="bg-sky-500 basis-3/4 flex-col"
         >
-          <div
-            style={{ display: "flex" }}
-            className="h-1/6 bg-sky-800 items-center"
-          >
+          <div style={{ display: "flex" }} className="h-1/6 items-center">
             <img
               style={{ height: "5vh" }}
               src={Logo}
               alt="logo"
-              className="ml-4"
+              className="ml-16"
             ></img>
           </div>
 
           <img
             style={{ height: "30vh", margin: "5% 5%" }}
             src={ChatLogo}
-            // className="m"
             alt="chatLogo"
           />
-          {/* <img
-            style={{ height: "50%" }}
-            className="h-2/4"
-            src={ChatLogo}
-            alt="chatLogo"
-          /> */}
+          <p className=" text-slate-600">
+            Chat from anywhere, anytime, at your ease.
+          </p>
         </div>
-        <div className="bg-sky-200 basis-1/4"></div>
+        <div
+          style={{ display: "flex" }}
+          className="bg-sky-200 basis-1/4 items-center justify-center"
+        >
+          <div
+            className=" items-center justify-center"
+            style={{
+              width: "40%",
+              height: "30%",
+              display: "flex",
+            }}
+          >
+            <input
+              placeholder="First Name"
+              style={{
+                height: "85%",
+                width: "50%",
+                borderTopLeftRadius: "1vh",
+                borderBottomLeftRadius: "1vh",
+                textAlign: "center",
+              }}
+            />
+            <div
+              style={{
+                display: "flex",
+                backgroundColor: "red",
+                width: "20%",
+                height: "85%",
+                borderTopRightRadius: "1vh",
+                borderBottomRightRadius: "1vh",
+                color: "white",
+              }}
+              hover={{ backgroundColor: "black" }}
+              className="items-center justify-center"
+            >
+              <p>Google</p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

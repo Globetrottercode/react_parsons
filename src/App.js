@@ -1,10 +1,12 @@
 import logo from "./logo.svg";
+import Chat from "./pages/chats";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
 
 import sendRequest from "./requests/sendRequest";
 
-function App() {
+function Check() {
   let [array, setArray] = useState(["Add Text in Input", "Click Add Button"]);
   let [input, setInput] = useState("");
   async function handleClick() {
@@ -15,6 +17,7 @@ function App() {
   }
   return (
     <div className="App">
+      <h1>CHATS</h1>
       <div style={{ border: "4px solid orange", margin: "5% 30%" }}>
         {array.map((ele) => {
           console.log("hello", ele);
@@ -23,6 +26,7 @@ function App() {
       </div>
       {/* <form> */}
       <input
+        className="border-solid border-2 border-indigo-600"
         style={{
           marginBottom: "4%",
           width: "30%",
@@ -38,6 +42,19 @@ function App() {
       <button onClick={handleClick}>Add</button>
       {/* </form> */}
     </div>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Check />} />
+          <Route path="/chats" element={<Chat />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

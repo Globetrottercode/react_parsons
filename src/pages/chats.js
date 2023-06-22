@@ -79,7 +79,29 @@ function Chat() {
           </div>
         </div>
         {selectedUser !== "" ? (
-          <></>
+          <>
+            {" "}
+            <div
+              style={{
+                height: "100vh",
+                display: "flex",
+              }}
+              className="basis-2/3 bg-cyan-100 flex-col"
+            >
+              <div
+                style={{
+                  height: "10vh",
+                  borderLeft: "1px solid gray",
+                  display: "flex",
+                }}
+                className=" bg-cyan-700 items-center"
+              >
+                <p className="ml-8 font-mono">{selectedUser}</p>
+              </div>
+              <div style={{ height: "80vh" }} className=" bg-slate-200"></div>
+              <div style={{ height: "10vh" }} className=" bg-cyan-700"></div>
+            </div>{" "}
+          </>
         ) : (
           <>
             {" "}

@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import Chat from "./pages/chats";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import Home from "./pages/Home";
 import "./App.css";
 
 import sendRequest from "./requests/sendRequest";
@@ -50,7 +51,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Check />} />
+          <Route path="/" element={<Home />} />
           <Route path="/chats" element={<Chat />} />
         </Routes>
       </BrowserRouter>

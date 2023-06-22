@@ -2,6 +2,7 @@ import LOGO from "../images/Logo.png";
 import chatSvg from "../images/chat-svgrepo-com.svg";
 import lockSvg from "../images/lock.svg";
 import { useState } from "react";
+import sendBtn from "../images/send.svg";
 
 let array = [
   "Sam",
@@ -50,9 +51,10 @@ function Chat() {
           </div>
 
           <div
+            className="bg-slate-100"
             style={{
               height: "90vh",
-              backgroundColor: "green",
+
               overflowY: "scroll",
             }}
           >
@@ -96,10 +98,16 @@ function Chat() {
                 }}
                 className=" bg-cyan-700 items-center"
               >
-                <p className="ml-8 font-mono">{selectedUser}</p>
+                <p className="ml-8 font-mono text-white">{selectedUser}</p>
               </div>
               <div style={{ height: "80vh" }} className=" bg-slate-200"></div>
-              <div style={{ height: "10vh" }} className=" bg-cyan-700"></div>
+              <div
+                style={{ height: "10vh", display: "flex" }}
+                className="items-center bg-cyan-700"
+              >
+                <input className="ml-16 h-10 rounded-md w-9/12 text-center" />
+                <img className="ml-16 h-10" src={sendBtn} alt="send" />
+              </div>
             </div>{" "}
           </>
         ) : (

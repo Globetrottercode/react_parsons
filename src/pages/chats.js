@@ -29,7 +29,82 @@ let array = [
 function Chat() {
   let [selectedUser, setSelectedUser] = useState("");
   //   sessionStorage.setItem("selectedUser", "value");
-  return <></>;
+  return (
+    <>
+      <div style={{ display: "flex" }}>
+        <div
+          className="basis-1/3 bg-cyan-200 flex-col"
+          style={{ height: "100vh", display: "flex" }}
+        >
+          <div
+            style={{ display: "flex", height: "10vh" }}
+            className="bg-cyan-700 items-center"
+          >
+            <img
+              style={{ height: "5vh" }}
+              src={LOGO}
+              alt="logo"
+              className="ml-4"
+            ></img>
+            <p className="ml-4  text-xl font-mono text-white ">Online</p>
+          </div>
+
+          <div
+            style={{
+              height: "90vh",
+              backgroundColor: "green",
+              overflowY: "scroll",
+            }}
+          >
+            {array.map((el) => {
+              return (
+                <>
+                  <div
+                    onClick={() => {
+                      setSelectedUser(el);
+                    }}
+                    style={{
+                      height: "10vh",
+                      backgroundColor: "white",
+                      display: "flex",
+                    }}
+                    className=" items-center hover:text-orange-500"
+                  >
+                    <p className="ml-8 font-mono">{el}</p>
+                  </div>
+                  <hr />
+                </>
+              );
+            })}
+          </div>
+        </div>
+        {selectedUser !== "" ? (
+          <></>
+        ) : (
+          <>
+            {" "}
+            <div
+              style={{
+                height: "100vh",
+                display: "flex",
+              }}
+              className="basis-2/3  bg-cyan-400 justify-center items-center flex-col"
+            >
+              <img className="h-3/6" src={chatSvg} alt="chatSvg"></img>
+              <p className="mt-8 text-slate-500">
+                <img
+                  src={lockSvg}
+                  style={{ display: "inline-block", height: "2vh" }}
+                  alt="lock"
+                />{" "}
+                Connect with people globally and safely
+              </p>
+            </div>{" "}
+          </>
+        )}
+      </div>
+    </>
+  );
 }
 
 export default Chat;
